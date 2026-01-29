@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const product1 = {
+      car : 'Lamborginni',
+      "Delivery-car" : "1 Day",
+      fun : function function1(){
+        console.log("I'm in an object ")
+      }
+    };
+
+    console.log(product1[`Delivery-car`]);
+    console.log(product1.fun());
+    console.log(product1);
+    console.log(JSON.stringify(product1));
+    console.log(JSON.parse(JSON.stringify(product1)));
+    
+  </script>
+</body>
+</html>

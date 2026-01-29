@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart</title>
+  <style>
+    button{
+      background-color: aquamarine;
+      border: 3px solid black;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="
+    console.log(`cart quantity : ${cartQuantity}`);
+    ">Quantity</button>
+
+  <button onclick="
+    cartQuantity++;
+    console.log(`cart quantity : ${cartQuantity}`);
+  ">Add to Cart</button>
+
+  <button onclick="
+    cartQuantity=cartQuantity+2;
+    console.log(`cart quantity : ${cartQuantity}`);
+  ">Add two</button>
+
+  <button onclick="
+    cartQuantity=cartQuantity+3;
+    console.log(`cart quantity : ${cartQuantity}`);
+  ">Add three</button>
+
+  <button onclick="
+    cartQuantity=0;
+    console.log('Cart is reset..');
+    console.log('cart quantity : 0');
+  ">Reset cart</button>
+</body>
+<script>
+  let cartQuantity=0;
+</script>
+</html>

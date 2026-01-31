@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Project</title>
+  <style>
+    .js-input{
+      padding: 10px;
+      font-size: 20px;
+    }
+    .calcbutton{
+      padding: 10px;
+      font-size: 20px;
+      background-color: rgb(0, 133, 0);
+      border: none;
+      color: white;
+    }
+    .subscribe-Button{
+      font-size: 20px;
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 10px 15px 10px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .is-subscribed{
+      border: none;
+      background-color: rgb(197, 197, 197);
+      color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+<body>
+  <h1>YouTube Subscribe Button</h1>
+  <button onclick="
+    SubscribeBbutton();
+  " class="js-subscribe-button subscribe-Button">Subscribe</button>
+
+  <h1>Amazon Shipping Calculator</h1>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+
+  <input class='js-input' type="number" placeholder="Cost of Order" onkeydown= "
+  EnterDis(event)
+  " >
+  <button class="js-calc-button calcbutton" onclick="
+    calculate();
+  " >Calculate</button>
+
+  <p class="js-display-cost"></p>
+
+
+  <script>
+
+    function EnterDis(event){
+      if(event.key==='Enter'){
+        calculate();
+    }
+    }
+
+
+    function calculate(){
+      const inputfun = document.querySelector('.js-input');
+      let cost = Number(inputfun.value);
+      if(cost<40){
+        cost+=10;
+      }
+
+      document.querySelector('.js-display-cost').innerHTML=`$${cost}`;
+    }
+
+
+    function SubscribeBbutton(){
+      const newButton=document.querySelector('.js-subscribe-button');
+      if(newButton.innerHTML==='Subscribe'){
+        newButton.innerHTML='Subscribed';
+        newButton.classList.add('is-subscribed');
+      }
+      else{
+        newButton.innerHTML='Subscribe';
+        newButton.classList.remove('is-subscribed')
+      }
+    }
+  </script>
+
+</body>
+</html>

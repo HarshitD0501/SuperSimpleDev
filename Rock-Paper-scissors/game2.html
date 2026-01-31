@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rock paper scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>rock paper scissors</h1>
+
+  <button class="move" onclick="
+    computerMove();
+    playerMove('rock');
+  "><img src="https://supersimple.dev/projects/rock-paper-scissors/images/rock-emoji.png" alt="Error" class="rock"></button>
+
+  <button class="move" onclick="
+    computerMove();
+    playerMove('paper');
+  "><img src="https://supersimple.dev/projects/rock-paper-scissors/images/paper-emoji.png" class="rock" alt=""></button>
+
+  <button class="move" onclick="
+    computerMove();
+    playerMove('scissors');
+  "><img src="https://supersimple.dev/projects/rock-paper-scissors/images/scissors-emoji.png" class="rock" alt=""></button>
+
+  <p class='js-result score'></p>
+
+  <p class='js-move score'></p>
+  <p class="js-para"></p>
+
+  <button class="Reset-button" onclick="
+    score = { wins: 0, loss: 0, tie: 0 };
+    localStorage.setItem('score', JSON.stringify(score));
+    update();
+  ">
+    Reset Score
+  </button>
+  <button class="auto-play-button" onclick="
+  autoplay()
+  ">Auto Play</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

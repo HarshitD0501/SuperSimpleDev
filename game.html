@@ -23,11 +23,14 @@
     playerMove('Scissors');
   ">Scissors</button>
 
+  <p class="js-para"></p>
+
   <button onclick="
     score.loss=0;
     score.wins=0;
     score.tie=0;
     localStorage.removeItem('score');
+    update();
   ">
     Reset Score
   </button>
@@ -41,6 +44,10 @@
         tie:0
       }
     }
+
+    update();
+
+
     let result ='';
     function playerMove(move){
       
@@ -79,10 +86,18 @@
         score.tie+=1;
       }
       localStorage.setItem('score', JSON.stringify(score));
+      update();
       alert(`You entered ${move} , Computeer reflects ${computer} . ${result}
 wins : ${score.wins} , losses : ${score.loss} , Tie : ${score.tie}`);
   
     }
+
+    function update(){
+      document.querySelector('.js-para').innerHTML=`wins : ${score.wins} , losses : ${score.loss} , Tie : ${score.tie}`;
+    
+    }
+    console.log("Result");
+    console.log(result);
 
     let computer ='';
     function computerMove(){

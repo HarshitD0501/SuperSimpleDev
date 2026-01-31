@@ -1,0 +1,29 @@
+.gridfun{
+  /* background-color: rgb(205, 205, 205); */
+  display:grid;
+  grid-template-columns: 250px 150px 150px;
+  gap: 5px;
+  align-items: center;
+}
+.Delete-button{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+
+}
+.add-button{
+  background-color: rgb(12, 170, 0);
+  border: none;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+.name-input,.date-input{
+  padding: 9px;
+  font-size: 15px;
+  display: grid ;
+  align-items: stretch;
+
+}

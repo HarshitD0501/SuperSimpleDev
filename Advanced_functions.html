@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="js-click-button">Click</button>
+  <script>
+
+    //AddEvent
+    const click=document.querySelector('.js-click-button');
+    click.addEventListener("click",()=>{
+      console.log("CLicked");
+    });
+
+    //Map
+    console.log([1,2,3,4].map((value,index) => {
+      return value+10;
+    }))
+
+    //Filter
+    console.log([1,2,-3].filter((value,index)=>{
+      return value>=0;
+    }))
+
+    // const list=['harshit','dubey','is','a','good','boy'].forEach(function(value,index){
+    //   console.log(index);
+    //   console.log(value);
+    // })
+    // const arrowfunc = () => {
+    //   console.log("Harsit");
+    // }
+    // arrowfunc();
+    // const shortcut = () => 2+3 ;
+    // console.log(shortcut());
+
+
+
+  </script>
+</body>
+</html>
